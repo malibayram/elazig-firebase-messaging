@@ -1,8 +1,19 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+// Ders esnasında eklemeyi unuttuğumuz için çalışmadı :)
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Ders esnasında eklemeyi unuttuğumuz için çalışmadı :)
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
